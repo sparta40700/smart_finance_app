@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Finance - Accueil</title>
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Smart Finance</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="Ateliers.html">Ateliers</a></li>
+                <li><a href="Webinaires.html">Webinaires</a></li>
+                <li><a href="Partenaires.html">Partenaires</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- Ajouter le lien vers la page d'inscription/connexion -->
+                <li><a href="back/connexion.php">Inscription/Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section de contenu -->
+    <section>
+        <h2>Bienvenue sur Smart Finance</h2>
+        <p>Smart Finance est un projet dédié à l'éducation financière des jeunes adultes en France. Nous offrons des ateliers pratiques, des webinaires informatifs et des ressources éducatives pour vous aider à améliorer votre littératie financière et à prendre des décisions éclairées concernant vos finances personnelles.</p>
+        <p>Rejoignez-nous dès maintenant pour acquérir les compétences financières essentielles pour réussir dans la vie.</p>
+        <!-- Bouton pour ouvrir la pop-up d'inscription/connexion -->
+        <button id="btn-open-popup">S'inscrire / Se connecter</button>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <!-- Liens vers les réseaux sociaux -->
+        <div class="social-media">
+            <a href="#" target="_blank" title="Suivez-nous sur Facebook"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#" target="_blank" title="Suivez-nous sur Twitter"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#" target="_blank" title="Suivez-nous sur Instagram"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+        
+        <!-- Liens vers les mentions légales et politique de confidentialité -->
+        <div class="legal-links">
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+            <!-- Ajouter le lien pour se déconnecter -->
+            <a href="back/deconnexion.php">Se déconnecter</a>
+        </div>
+
+        <p>Copyright © 2023 Smart Finance. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Structure de la pop-up d'inscription/connexion -->
+    <div id="popup">
+        <div class="popup-content">
+            <!-- Onglets pour passer de l'inscription à la connexion -->
+            <div class="tabs">
+                <button class="tab" id="tab-register">S'inscrire</button>
+                <button class="tab" id="tab-login">Se connecter</button>
+            </div>
+
+            <!-- Formulaire d'inscription -->
+            <form id="form-register" action="back/traitement_inscription.php" method="post">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="email">Adresse e-mail :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mot_de_passe">Mot de passe :</label>
+                <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+
+                <input type="submit" value="S'inscrire">
+            </form>
+
+            <!-- Formulaire de connexion -->
+            <form id="form-login" action="back/traitement_connexion.php" method="post">
+                <label for="email_login">Adresse e-mail :</label>
+                <input type="email" id="email_login" name="email_login" required>
+
+                <label for="mot_de_passe_login">Mot de passe :</label>
+                <input type="password" id="mot_de_passe_login" name="mot_de_passe_login" required>
+
+                <input type="submit" value="Se connecter">
+            </form>
+            
+            <!-- Bouton pour fermer la pop-up -->
+            <button id="btn-close-popup">Fermer</button>
+        </div>
+    </div>
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

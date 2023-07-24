@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Finance - Contact</title>
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header (réutilisez le même header que sur la page d'accueil) -->
+    <header>
+        <h1>Smart Finance</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="Ateliers.html">Ateliers</a></li>
+                <li><a href="Webinaires.html">Webinaires</a></li>
+                <li><a href="Partenaires.html">Partenaires</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section de contenu -->
+    <section>
+        <h2>Contactez-nous</h2>
+        <p>N'hésitez pas à nous contacter pour toute question ou demande d'information concernant notre projet Smart Finance.</p>
+        <!-- Formulaire de contact -->
+        <form action="traitement_contact.php" method="POST">
+            <div>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div>
+                <label for="email">E-mail :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div>
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Pied de page (réutilisez le même pied de page que sur la page d'accueil) -->
+    <footer>
+        <!-- Liens vers les réseaux sociaux -->
+        <div class="social-media">
+            <a href="#" target="_blank" title="Suivez-nous sur Facebook"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#" target="_blank" title="Suivez-nous sur Twitter"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#" target="_blank" title="Suivez-nous sur Instagram"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+        
+        <!-- Liens vers les mentions légales et politique de confidentialité -->
+        <div class="legal-links">
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+        </div>
+
+        <p>Copyright © 2023 Smart Finance. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

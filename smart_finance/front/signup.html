@@ -1,0 +1,45 @@
+<?php
+// Générer un jeton CSRF et le stocker dans la session
+session_start();
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+$csrf_token = $_SESSION['csrf_token'];
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Finance - Inscription</title>
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header (réutilisez le même header que sur la page d'accueil) -->
+    
+    <!-- Section de contenu -->
+    <section>
+        <h2>Inscription à Smart Finance</h2>
+        <!-- Formulaire d'inscription -->
+        <form action="traitement_inscription.php" method="post">
+            <label for="nom_complet">Nom complet :</label>
+            <input type="text" id="nom_complet" name="nom_complet" required>
+            
+            <label for="adresse_email">Adresse e-mail :</label>
+            <input type="email" id="adresse_email" name="adresse_email" required>
+
+            <label for="mot_de_passe">Mot de passe :</label>
+            <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+            
+            <label for="confirmer_mot_de_passe">Confirmer le mot de passe :</label>
+            <input type="password" id="confirmer_mot_de_passe" name="confirmer_mot_de_passe" required>
+            
+            <!-- Champ caché pour le jeton CSRF -->
+            <input type="hidden" name="csrf_token" value="<?php echo $csrf_token; ?>">
+            
+            <input type="submit" value="S'inscrire">
+        </form>
+    </section>
+
+    <!-- Pied de page (réutilisez le même pied de page que sur la page d'accueil) -->
+</body>
+</html>
